@@ -1,0 +1,11 @@
+<a [routerLink]="['/home']">Home</a>
+
+<p *ngFor="let error of errors">{{error}}</p>
+
+<h4>Add a new author: </h4>
+<form (submit)="newAuthorSubmit()">
+  <p>Name:</p>
+  <input type="text" name="newAuthor.name" [(ngModel)]="newAuthor.name">
+  <input type="submit" value="Submit">
+  <button [routerLink] = "['/home']">Cancel!</button>
+</form>
